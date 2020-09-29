@@ -74,7 +74,7 @@ export default StyleSheet.create({
   timerLabel: {
     color: white,
     fontSize: 12,
-    fontFamily: 'Muli'
+    fontFamily: "Muli",
   },
   timerLabelsContainer: {
     alignSelf: "stretch",
