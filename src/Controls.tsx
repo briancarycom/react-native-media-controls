@@ -22,6 +22,9 @@ const Controls = (props: ControlsProps) => {
   const icon =
     playerState === PLAYER_STATES.PLAYING ? images.pauseIcon : images.playIcon;
 
+  console.log("playerState from Controls: ", playerState);
+  console.log("icon from Controls: ", icon);
+
   const content = isLoading ? (
     <ActivityIndicator size="large" color="#FFF" />
   ) : (
