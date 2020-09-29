@@ -18,12 +18,18 @@ const Controls = (props: ControlsProps) => {
   const pressAction = playerState === PLAYER_STATES.ENDED ? onReplay : onPause;
 
   const replayIcon = images.replayIcon;
-  const icon =
-    playerState === PLAYER_STATES.ENDED
-      ? replayIcon
-      : PLAYER_STATES.PLAYING
-      ? images.pauseIcon
-      : images.playIcon;
+  const icon = () => {
+    switch (playerState) {
+      case PLAYER_STATES.PAUSED:
+        return images.playIcon;
+      case PLAYER_STATES.PLAYING:
+        return images.pauseIcon;
+      case PLAYER_STATES.ENDED:
+        return replayIcon;
+      default:
+        return images.playIcon;
+    }
+  };
 
   const content = isLoading ? (
     <ActivityIndicator size="large" color="#FFF" />
@@ -33,7 +39,7 @@ const Controls = (props: ControlsProps) => {
       onPress={pressAction}
       activeOpacity={0}
     >
-      <Image source={icon} style={styles.playIcon} />
+      <Image source={icon()} style={styles.playIcon} />
     </TouchableOpacity>
   );
 
