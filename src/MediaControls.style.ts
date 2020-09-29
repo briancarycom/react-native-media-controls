@@ -39,6 +39,14 @@ export default StyleSheet.create({
     height: 50,
     justifyContent: "center",
     width: 50,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   playIcon: {
     height: 22,

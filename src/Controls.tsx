@@ -20,10 +20,7 @@ const Controls = (props: ControlsProps) => {
   const pressAction = playerState === PLAYER_STATES.ENDED ? onReplay : onPause;
 
   const icon =
-    playerState === PLAYER_STATES.PLAYING ? images.playIcon : images.pauseIcon;
-
-  console.log("playerState from Controls: ", playerState);
-  console.log("icon from Controls: ", icon);
+    playerState === PLAYER_STATES.PLAYING ? images.pauseIcon : images.playIcon;
 
   const content = isLoading ? (
     <ActivityIndicator size="large" color="#FFF" />
