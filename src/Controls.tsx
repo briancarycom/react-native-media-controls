@@ -23,6 +23,7 @@ const Controls = (props: ControlsProps) => {
     <TouchableOpacity
       style={[styles.playButton, { backgroundColor: mainColor }]}
       onPress={pressAction}
+      activeOpacity={0}
     >
       <Image source={icon} style={styles.playIcon} />
     </TouchableOpacity>
