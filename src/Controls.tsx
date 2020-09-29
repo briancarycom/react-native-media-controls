@@ -1,7 +1,6 @@
 import React from "react";
 import { TouchableOpacity, View, ActivityIndicator, Image } from "react-native";
 import styles from "./MediaControls.style";
-// import { getPlayerStateIcon } from "./utils";
 import { Props } from "./MediaControls";
 import { PLAYER_STATES } from "./constants/playerStates";
 
@@ -16,12 +15,15 @@ type ControlsProps = Pick<
 
 const Controls = (props: ControlsProps) => {
   const { isLoading, mainColor, playerState, onReplay, onPause } = props;
-  // const icon = getPlayerStateIcon(playerState);
   const pressAction = playerState === PLAYER_STATES.ENDED ? onReplay : onPause;
 
   const replayIcon = images.replayIcon;
   const icon =
-    playerState === PLAYER_STATES.PLAYING ? images.pauseIcon : images.playIcon;
+    playerState === PLAYER_STATES.ENDED
+      ? replayIcon
+      : PLAYER_STATES.PLAYING
+      ? images.pauseIcon
+      : images.playIcon;
 
   const content = isLoading ? (
     <ActivityIndicator size="large" color="#FFF" />
@@ -31,20 +33,7 @@ const Controls = (props: ControlsProps) => {
       onPress={pressAction}
       activeOpacity={0}
     >
-      <Image
-        source={icon}
-        style={[
-          styles.playIcon,
-          { display: PLAYER_STATES.ENDED ? "none" : "flex" },
-        ]}
-      />
-      <Image
-        source={replayIcon}
-        style={[
-          styles.playIcon,
-          { display: PLAYER_STATES.ENDED ? "flex" : "none" },
-        ]}
-      />
+      <Image source={icon} style={styles.playIcon} />
     </TouchableOpacity>
   );
 
