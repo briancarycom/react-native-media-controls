@@ -25,7 +25,7 @@ const Controls = (props: ControlsProps) => {
       onPress={pressAction}
       activeOpacity={0}
     >
-      <Image source={icon} style={styles.playIcon} />
+      <Image source={icon} style={styles.playIcon} styles={{height: 50, width: 50}} />
     </TouchableOpacity>
   );
 

@@ -150,7 +150,7 @@ const MediaControls = (props: Props) => {
               onPause={onPause}
               onReplay={onReplay}
               isLoading={isLoading}
-              mainColor={'black'}
+              mainColor={'#3366FF'}
               playerState={playerState}
             />
             <Slider
