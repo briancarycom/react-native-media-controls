@@ -102,6 +102,6 @@ export default StyleSheet.create({
   },
   track: {
     borderRadius: 1,
-    height: 5,
+    height: 2,
   },
 });
