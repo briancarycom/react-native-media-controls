@@ -1,4 +1,18 @@
 # react-native-media-controls
+
+### This is a fork for customization purposes.
+
+Note: the following scripts have been removed from `package.json` in order to run on CI. You may choose to run these scripts when developing with this library.
+
+```
+"start": "tsdx watch",
+"dev": "tsdx watch --localDev",
+"build": "tsdx build",
+"test": "tsdx test --passWithNoTests",
+"lint": "tsdx lint",
+"prepare": "tsdx build"
+```
+
 A sweet UI component to manipulate your media. Strongly typed using Typescript.
 
 ![mediac](https://user-images.githubusercontent.com/10927770/80893585-89967000-8c88-11ea-83af-2a028115ee12.gif)
