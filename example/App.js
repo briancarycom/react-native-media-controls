@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
     left: 0,
     bottom: 0,
     right: 0,
-    backgroundColor: "black",
+    backgroundColor: "#3366FF",
   },
 });
 
