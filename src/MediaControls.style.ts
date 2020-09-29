@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
-const containerBackgroundColor = "rgba(45, 59, 62, 0.4)";
-const playButtonBorderColor = "rgba(255,255,255,0.5)";
+const containerBackgroundColor = "rgba(45, 59, 62, 0.0)";
+const playButtonBorderColor = "rgba(255,255,255,0.0)";
 const white = "#fff";
 
 export default StyleSheet.create({
@@ -34,7 +34,7 @@ export default StyleSheet.create({
   playButton: {
     alignItems: "center",
     borderColor: playButtonBorderColor,
-    borderRadius: '50%',
+    borderRadius: 50,
     borderWidth: 0,
     height: 50,
     justifyContent: "center",
