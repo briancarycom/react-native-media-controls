@@ -19,6 +19,9 @@ const Controls = (props: ControlsProps) => {
   // const icon = getPlayerStateIcon(playerState);
   const pressAction = playerState === PLAYER_STATES.ENDED ? onReplay : onPause;
 
+  const icon =
+    playerState === PLAYER_STATES.PLAYING ? images.pauseIcon : images.playIcon;
+
   const content = isLoading ? (
     <ActivityIndicator size="large" color="#FFF" />
   ) : (
@@ -27,7 +30,7 @@ const Controls = (props: ControlsProps) => {
       onPress={pressAction}
       activeOpacity={0}
     >
-      <Image source={images.playIcon} style={styles.playIcon} />
+      <Image source={icon} style={styles.playIcon} />
     </TouchableOpacity>
   );
 
