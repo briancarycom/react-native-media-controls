@@ -25,13 +25,7 @@
   "engines": {
     "node": ">=10"
   },
-  "scripts": {
-    "start": "tsdx watch",
-    "dev": "tsdx watch --localDev",
-    "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint"
-  },
+  "scripts": {},
   "peerDependencies": {
     "react": ">=16",
     "react-native": ">=0.60"
