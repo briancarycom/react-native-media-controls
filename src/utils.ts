@@ -1,5 +1,5 @@
 import { PLAYER_STATES } from "./constants/playerStates";
-import images from './Images'
+import images from "./Images";
 
 export const humanizeVideoDuration = (seconds: number) => {
   const [begin, end] = seconds >= 3600 ? [11, 8] : [14, 5];
