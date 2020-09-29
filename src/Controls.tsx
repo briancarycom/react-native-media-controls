@@ -19,6 +19,7 @@ const Controls = (props: ControlsProps) => {
   // const icon = getPlayerStateIcon(playerState);
   const pressAction = playerState === PLAYER_STATES.ENDED ? onReplay : onPause;
 
+  const replayIcon = images.replayIcon;
   const icon =
     playerState === PLAYER_STATES.PLAYING ? images.pauseIcon : images.playIcon;
 
@@ -30,7 +31,20 @@ const Controls = (props: ControlsProps) => {
       onPress={pressAction}
       activeOpacity={0}
     >
-      <Image source={icon} style={styles.playIcon} />
+      <Image
+        source={icon}
+        style={[
+          styles.playIcon,
+          { display: PLAYER_STATES.ENDED ? "none" : "flex" },
+        ]}
+      />
+      <Image
+        source={replayIcon}
+        style={[
+          styles.playIcon,
+          { display: PLAYER_STATES.ENDED ? "flex" : "none" },
+        ]}
+      />
     </TouchableOpacity>
   );
 
