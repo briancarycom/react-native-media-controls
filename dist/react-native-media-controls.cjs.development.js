@@ -188,9 +188,9 @@ var Slider = function Slider(props) {
       onFullScreen = props.onFullScreen,
       onPause = props.onPause,
       progress = props.progress;
-  var containerStyle = (customSliderStyle === null || customSliderStyle === void 0 ? void 0 : customSliderStyle.containerStyle) || {};
-  var customTrackStyle = (customSliderStyle === null || customSliderStyle === void 0 ? void 0 : customSliderStyle.trackStyle) || {};
-  var customThumbStyle = (customSliderStyle === null || customSliderStyle === void 0 ? void 0 : customSliderStyle.thumbStyle) || {};
+  var containerStyle = (customSliderStyle == null ? void 0 : customSliderStyle.containerStyle) || {};
+  var customTrackStyle = (customSliderStyle == null ? void 0 : customSliderStyle.trackStyle) || {};
+  var customThumbStyle = (customSliderStyle == null ? void 0 : customSliderStyle.thumbStyle) || {};
 
   var dragging = function dragging(value) {
     var onSeeking = props.onSeeking,
@@ -384,7 +384,7 @@ var MediaControls = function MediaControls(props) {
     onPause: onPause,
     onReplay: onReplay,
     isLoading: isLoading,
-    mainColor: "#3366FF",
+    mainColor: "#FFFFFF",
     playerState: playerState
   }), React__default.createElement(Slider, {
     progress: progress,
