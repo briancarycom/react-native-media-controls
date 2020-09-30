@@ -49,9 +49,9 @@ export default StyleSheet.create({
     elevation: 5,
   },
   playIcon: {
-    height: 22,
+    height: 44,
     resizeMode: "contain",
-    width: 22,
+    width: 44,
   },
   progressColumnContainer: {
     flex: 1,
