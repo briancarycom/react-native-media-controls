@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
-const containerBackgroundColor = "rgba(45, 59, 62, 0.4)";
-const playButtonBorderColor = "rgba(255,255,255,0.5)";
+const containerBackgroundColor = "rgba(45, 59, 62, 0.0)";
+const playButtonBorderColor = "rgba(255,255,255,0.0)";
 const white = "#fff";
 
 export default StyleSheet.create({
@@ -34,11 +34,19 @@ export default StyleSheet.create({
   playButton: {
     alignItems: "center",
     borderColor: playButtonBorderColor,
-    borderRadius: 3,
-    borderWidth: 1.5,
+    borderRadius: 50,
+    borderWidth: 0,
     height: 50,
     justifyContent: "center",
     width: 50,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   playIcon: {
     height: 22,
@@ -74,6 +82,7 @@ export default StyleSheet.create({
   timerLabel: {
     color: white,
     fontSize: 12,
+    fontFamily: "Muli",
   },
   timerLabelsContainer: {
     alignSelf: "stretch",
@@ -93,6 +102,6 @@ export default StyleSheet.create({
   },
   track: {
     borderRadius: 1,
-    height: 5,
+    height: 2,
   },
 });
